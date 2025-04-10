@@ -110,9 +110,26 @@ schema:
 | correct answer TEXT   |                       |                       |                       |                       |                       |
 | created_at TIMESTAMP  |                       |                       |                       |                       |                       |
 
-- user stories
-  > **_EXTENTIONS: TORNADO EXPERT-TIMED MODE_**
-    When I select  
+- **_USER STORIES EXTENTIONS: TORNADO EXPERT-TIMED MODE_**
+  - **SCENE 1**  
+    > As a user,  
+    When I select "Timed Mode",  
+    Then load up a list of "messages"
+  
+  - **SCENE 2**
+    > As a user,  
+    When I select one message from the list,  
+    Then open up the message
+  
+  - ***SCENE 3**
+    > As a user,  
+    When I click on an answer,    
+    Then I will see the question and answer selected  
+    
+  - ***SCENE 4**
+    > As a user,  
+    When I click the back button,  
+    Then I will be back at the list of messags   
 - components updates
 - endpoint updates
 - features
