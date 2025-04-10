@@ -130,7 +130,7 @@
   - ***SCENE 4**
     > As a user,  
     When I click the back button,  
-    Then I will be back at the list of messags   
+    Then I will be back at the list of messages   
 - components updates
 - endpoint updates
 - features
