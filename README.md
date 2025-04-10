@@ -84,18 +84,22 @@ points
 created_at
 
 ## Extensions:
+1. Tornado expert
+
 - features
   - dark mode
   - new user/returning user
   - flashlight story line
-    
+
+- different game modes
+  - tornado expert
+  - 
 user logs in
 local or google oauth
 user has levels, saved data
 their user account has levels and achievements
-different game modes
+
 play out scenarios
-tornado expert
 can try to save peopl
 can try to harm people
 person in tornado trying to save the towsnpeople
