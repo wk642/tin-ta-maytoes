@@ -58,3 +58,7 @@ prepare demo
 add screenshot
 create 1 pull requests
 have mentor and peer review PR
+
+## week 4
+present
+record
