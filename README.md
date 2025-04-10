@@ -62,3 +62,23 @@ have mentor and peer review PR
 ## week 4
 present
 record
+
+## MVP:
+game
+questions asked to user with right or wrong answers
+wrong answer is +1
+right answer is +2
+after 3 questions you get result
+if score is even, you survive,
+if score is odd, you perish
+schema
+question table
+ID
+question text
+incorrect_answer
+correct_answer
+created_at
+rounds table
+ID
+points
+created_at
