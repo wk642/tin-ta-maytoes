@@ -72,6 +72,7 @@
 - [ ] if score is even, you survive,
 - [ ] if score is odd, you perish
 - [ ] schema:
+      
 | MVP QUESTIONS Table   | MVP ROUNDS Table      | 
 | --------------------- | --------------------- |
 | id UUID [PK]          | id UUID [PK]          |
