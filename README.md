@@ -19,3 +19,21 @@
 - screen reader accessible
 - aria labels and attributes
 - test how it looks when zoomed in
+
+## Week 0 milestones
+pick your project
+mvp
+features
+user flows
+wireframes
+components
+one sentence project pitch (project description)
+list of tools and frameworks (in project requirements)
+list api chosen
+technical risks
+style guide
+db schema
+use github kanban for project management
+prepare 3 minute presentation
+add GH description to repo
+invite mentor and KR to collab
