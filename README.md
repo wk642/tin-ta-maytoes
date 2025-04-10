@@ -102,15 +102,17 @@ schema:
   
 - db updates
 
-| MVP QUESTIONS Table   | MVP ROUNDS Table      | CHARACTERS table      |  COLLECTION table     | MAPS table            |
-| --------------------- | --------------------- | --------------------- | --------------------- | --------------------- |
-| id UUID [PK]          | id UUID [PK]          | id UUID [PK}          | id UUID [PK]          | id UUID [PK]          |
-| qesution TEXT         | points INTEGER        | name VARCHAR          | item TEXT             | levels INTERGER       |
-| incorrect answer TEXT | created_at TIMESTAMP  | alive BOOLEAN         | amount  INTERGER      |                       |
-| correct answer TEXT   |                       |                       |                       |                       |
-| created_at TIMESTAMP  |                       |                       |                       |                       |
+| MVP QUESTIONS Table   | MVP ROUNDS Table      | CHARACTERS table      |  COLLECTION table     | MAPS table            | TIME MODE table       |
+| --------------------- | --------------------- | --------------------- | --------------------- | --------------------- | --------------------- |
+| id UUID [PK]          | id UUID [PK]          | id UUID [PK}          | id UUID [PK]          | id UUID [PK]          | id UUID               |
+| qesution TEXT         | points INTEGER        | name VARCHAR          | item TEXT             | levels INTERGER       | created_at TIMESTAMP  |
+| incorrect answer TEXT | created_at TIMESTAMP  | alive BOOLEAN         | amount  INTERGER      | name VARCHAR          |                       |
+| correct answer TEXT   |                       |                       |                       |                       |                       |
+| created_at TIMESTAMP  |                       |                       |                       |                       |                       |
 
 - user stories
+  > **_EXTENTIONS: TORNADO EXPERT-TIMED MODE_**
+    When I select  
 - components updates
 - endpoint updates
 - features
