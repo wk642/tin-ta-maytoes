@@ -72,13 +72,13 @@ after 3 questions you get result
 if score is even, you survive,
 if score is odd, you perish
 schema:
-| MVP Question Table | MVP Rounds Table | 
-| ------------------ | ---------------- |
-| id UUID [PK]       | id UUID [PK]     |
-| qesution TEXT      | points INTEGER   |
-| incorrect answer TEXT | created_at TIMESTAMP |
-| correct answer TEXT | |
-| created_at TIMESTAMP | |
+| MVP QUESTIONS Table   | MVP ROUNDS Table      | 
+| --------------------- | --------------------- |
+| id UUID [PK]          | id UUID [PK]          |
+| qesution TEXT         | points INTEGER        |
+| incorrect answer TEXT | created_at TIMESTAMP  |
+| correct answer TEXT   |                       |
+| created_at TIMESTAMP  |                       |
 
 ## Extensions:
 1. Tornado expert
@@ -101,6 +101,15 @@ schema:
 - The interface will be like our text messages on your phone.
   
 - db updates
+
+| MVP QUESTIONS Table   | MVP ROUNDS Table      | CHARACTERS table      |  COLLECTION table     | MAPS table            |
+| --------------------- | --------------------- | --------------------- | --------------------- | --------------------- |
+| id UUID [PK]          | id UUID [PK]          | id UUID [PK}          | id UUID [PK]          | id UUID [PK]          |
+| qesution TEXT         | points INTEGER        | name VARCHAR          | item TEXT             | levels INTERGER       |
+| incorrect answer TEXT | created_at TIMESTAMP  | alive BOOLEAN         | amount  INTERGER      |                       |
+| correct answer TEXT   |                       |                       |                       |                       |
+| created_at TIMESTAMP  |                       |                       |                       |                       |
+
 - user stories
 - components updates
 - endpoint updates
