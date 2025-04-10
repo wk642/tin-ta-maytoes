@@ -37,3 +37,11 @@ use github kanban for project management
 prepare 3 minute presentation
 add GH description to repo
 invite mentor and KR to collab
+
+## Week 1
+create black express and react app
+deploy to render
+connect db and 1 api
+create 2 components
+create 1 pull requests
+have mentor and peer review PR
