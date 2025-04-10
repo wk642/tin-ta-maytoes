@@ -71,17 +71,14 @@ right answer is +2
 after 3 questions you get result
 if score is even, you survive,
 if score is odd, you perish
-schema
-question table
-ID
-question text
-incorrect_answer
-correct_answer
-created_at
-rounds table
-ID
-points
-created_at
+schema:
+| MVP Question Table | MVP Rounds Table | 
+| ------------------ | ---------------- |
+| id UUID [PK]       | id UUID [PK]     |
+| qesution TEXT      | points INTEGER   |
+| incorrect answer TEXT | created_at TIMESTAMP |
+| correct answer TEXT | |
+| created_at TIMESTAMP | |
 
 ## Extensions:
 1. Tornado expert
@@ -101,8 +98,12 @@ created_at
   - Main mission:
     - You woke up in an empty town to start in the middle of a field. You look around and all you see is the nature. You do not see that there are anyone else (yet). You start exploring and realize that you are in a new place, and you are starting to develop a new life here. You have to collect different things by helping others survive the tin ta maytoes to start building a new life and meet new people as you go. All while you learn how to go from 0 to expert as a tornado expert. Are you going to be an expert that saves a lot of lives? or are you going to get forced out of the town and have to find yourself a new home?
         
-- The interface will be like our text messages on your phone. 
-
+- The interface will be like our text messages on your phone.
+  
+- db updates
+- user stories
+- components updates
+- endpoint updates
 - features
   - dark mode
   - new user/returning user
