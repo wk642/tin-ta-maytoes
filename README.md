@@ -51,3 +51,10 @@ test components
 finish mvp
 create 1 pull requests
 have mentor and peer review PR
+
+## week 3
+git checkout -b complete_mvp
+prepare demo
+add screenshot
+create 1 pull requests
+have mentor and peer review PR
