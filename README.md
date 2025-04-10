@@ -84,10 +84,11 @@ points
 created_at
 
 ## Extensions:
-features
-dark mode
-new user/returning user
-flashlight story line
+- features
+  - dark mode
+  - new user/returning user
+  - flashlight story line
+    
 user logs in
 local or google oauth
 user has levels, saved data
