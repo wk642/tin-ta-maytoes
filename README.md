@@ -45,3 +45,9 @@ connect db and 1 api
 create 2 components
 create 1 pull requests
 have mentor and peer review PR
+
+## week 2
+test components
+finish mvp
+create 1 pull requests
+have mentor and peer review PR
