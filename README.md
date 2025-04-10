@@ -82,3 +82,25 @@ rounds table
 ID
 points
 created_at
+
+## Extensions:
+features
+dark mode
+new user/returning user
+flashlight story line
+user logs in
+local or google oauth
+user has levels, saved data
+their user account has levels and achievements
+different game modes
+play out scenarios
+tornado expert
+can try to save peopl
+can try to harm people
+person in tornado trying to save the towsnpeople
+2D guy running around
+play as tintamato instead
+schema
+user table with auth
+question table
+add category
