@@ -1,6 +1,7 @@
 # tin-ta-maytoes
 
-## Requirements:
+## Requirements
+
 - [ ] use Postgres, express, react, node.js
 - [ ] 2 tables in db
 - [ ] 1 external api integration
@@ -21,6 +22,7 @@
 - [ ] test how it looks when zoomed in
 
 ## Week 0 milestones
+
 - [ ] pick your project
 - [ ] mvp
 - [ ] features
@@ -39,6 +41,7 @@
 - [ ] invite mentor and KR to collab
 
 ## Week 1
+
 - [ ] create black express and react app
 - [ ] deploy to render
 - [ ] connect db and 1 api
@@ -47,12 +50,14 @@
 - [ ] have mentor and peer review PR
 
 ## week 2
+
 - [ ] test components
 - [ ] finish mvp
 - [ ] create 1 pull requests
 - [ ] have mentor and peer review PR
 
 ## week 3
+
 - [ ] git checkout -b complete_mvp
 - [ ] prepare demo
 - [ ] add screenshot
@@ -60,10 +65,12 @@
 - [ ] have mentor and peer review PR
 
 ## week 4
+
 - [ ] present
 - [ ] record
 
-## MVP:
+## MVP
+
 - [ ] game
 - [ ] questions asked to user with right or wrong answers
 - [ ] wrong answer is +1
@@ -72,8 +79,7 @@
 - [ ] if score is even, you survive,
 - [ ] if score is odd, you perish
 - [ ] schema:
-      
-| MVP QUESTIONS Table   | MVP ROUNDS Table      | 
+| MVP QUESTIONS Table   | MVP ROUNDS Table      |
 | --------------------- | --------------------- |
 | id UUID [PK]          | id UUID [PK]          |
 | qesution TEXT         | points INTEGER        |
@@ -81,31 +87,31 @@
 | correct answer TEXT   |                       |
 | created_at TIMESTAMP  |                       |
 
-## Extensions:
+## Extensions
+
 1. Tornado expert
-- When there is a weather question, people come to you. Your job is to give people insturctions on what to do. 
+
+- When there is a weather question, people come to you. Your job is to give people insturctions on what to do.
 - Give instructions to people on what to do to survive or perishment.
 - It is entirely up to you on what kind of person you become. You can do your best to save everyone, or you can intentionally get them in trouble, maybe because they are your arch nemsis.
   - Within this mode, user can play
   - timed mode:
-    - Within a certain number of minutes, you have to save as many people as you can. 
+    - Within a certain number of minutes, you have to save as many people as you can.
   - story mode:
     - You recently purchased a used phone, you plugged it in, and all of a sudden, your phone is blowing up! Ding! Ding! Ding! Ding! Ding! Ding!....
     - You check your phone and you were gettin a bunch of notifications about upcoming severe weather warnings. You look at your messages and theres 10 unread messages from 10 different people.
     - You open it up and see that the messages are people asking for advice on what to do in this situation (tornado).
     - You have no clue what to do in a tornado, but it is up to you to decide the fate of everyone in this town.
     - As you help people you will collect different things, to complete the main mission
-   
   - Main mission:
     - You woke up in an empty town to start in the middle of a field. You look around and all you see is the nature. You do not see that there are anyone else (yet). You start exploring and realize that you are in a new place, and you are starting to develop a new life here. You have to collect different things by helping others survive the tin ta maytoes to start building a new life and meet new people as you go. All while you learn how to go from 0 to expert as a tornado expert. Are you going to be an expert that saves a lot of lives? or are you going to get forced out of the town and have to find yourself a new home?
-        
 - The interface will be like our text messages on your phone.
   
 - db updates
 
 | MVP QUESTIONS Table   | MVP ROUNDS Table      | CHARACTERS table      |  COLLECTION table     | MAPS table            | TIME MODE table       |
 | --------------------- | --------------------- | --------------------- | --------------------- | --------------------- | --------------------- |
-| id UUID [PK]          | id UUID [PK]          | id UUID [PK}          | id UUID [PK]          | id UUID [PK]          | id UUID               |
+| id UUID [PK]          | id UUID [PK]          | id UUID [PK]          | id UUID [PK]          | id UUID [PK]          | id UUID               |
 | qesution TEXT         | points INTEGER        | name VARCHAR          | item TEXT             | levels INTERGER       | created_at TIMESTAMP  |
 | incorrect answer TEXT | created_at TIMESTAMP  | alive BOOLEAN         | amount  INTERGER      | name VARCHAR          |                       |
 | correct answer TEXT   |                       |                       |                       |                       |                       |
@@ -124,13 +130,12 @@
   
   - ***SCENE 3**
     > As a user,  
-    When I click on an answer,    
-    Then I will see the question and answer selected  
-    
+    When I click on an answer,
+    Then I will see the question and answer selected
   - ***SCENE 4**
     > As a user,  
     When I click the back button,  
-    Then I will be back at the list of messages   
+    Then I will be back at the list of messages
 - components updates
 - endpoint updates
 - features
@@ -140,7 +145,6 @@
 
 - different game modes
   - tornado expert
-  - 
 user logs in
 local or google oauth
 user has levels, saved data
