@@ -79,13 +79,13 @@
 - [ ] if score is even, you survive,
 - [ ] if score is odd, you perish
 - [ ] schema:
-| MVP QUESTIONS Table   | MVP ROUNDS Table      |
-| --------------------- | --------------------- |
-| id UUID [PK]          | id UUID [PK]          |
-| qesution TEXT         | points INTEGER        |
-| incorrect answer TEXT | created_at TIMESTAMP  |
-| correct answer TEXT   |                       |
-| created_at TIMESTAMP  |                       |
+      | MVP QUESTIONS Table | MVP ROUNDS Table |
+      | --------------------- | --------------------- |
+      | id UUID [PK] | id UUID [PK] |
+      | qesution TEXT | points INTEGER |
+      | incorrect answer TEXT | created_at TIMESTAMP |
+      | correct answer TEXT | |
+      | created_at TIMESTAMP | |
 
 ## Extensions
 
@@ -106,49 +106,49 @@
   - Main mission:
     - You woke up in an empty town to start in the middle of a field. You look around and all you see is the nature. You do not see that there are anyone else (yet). You start exploring and realize that you are in a new place, and you are starting to develop a new life here. You have to collect different things by helping others survive the tin ta maytoes to start building a new life and meet new people as you go. All while you learn how to go from 0 to expert as a tornado expert. Are you going to be an expert that saves a lot of lives? or are you going to get forced out of the town and have to find yourself a new home?
 - The interface will be like our text messages on your phone.
-  
 - db updates
 
-| MVP QUESTIONS Table   | MVP ROUNDS Table      | CHARACTERS table      |  COLLECTION table     | MAPS table            | TIME MODE table       |
-| --------------------- | --------------------- | --------------------- | --------------------- | --------------------- | --------------------- |
-| id UUID [PK]          | id UUID [PK]          | id UUID [PK]          | id UUID [PK]          | id UUID [PK]          | id UUID               |
-| qesution TEXT         | points INTEGER        | name VARCHAR          | item TEXT             | levels INTERGER       | created_at TIMESTAMP  |
-| incorrect answer TEXT | created_at TIMESTAMP  | alive BOOLEAN         | amount  INTERGER      | name VARCHAR          |                       |
-| correct answer TEXT   |                       |                       |                       |                       |                       |
-| created_at TIMESTAMP  |                       |                       |                       |                       |                       |
+| MVP QUESTIONS Table   | MVP ROUNDS Table     | CHARACTERS table | COLLECTION table | MAPS table      | TIME MODE table      |
+| --------------------- | -------------------- | ---------------- | ---------------- | --------------- | -------------------- |
+| id UUID [PK]          | id UUID [PK]         | id UUID [PK]     | id UUID [PK]     | id UUID [PK]    | id UUID              |
+| qesution TEXT         | points INTEGER       | name VARCHAR     | item TEXT        | levels INTERGER | created_at TIMESTAMP |
+| incorrect answer TEXT | created_at TIMESTAMP | alive BOOLEAN    | amount INTERGER  | name VARCHAR    |                      |
+| correct answer TEXT   |                      |                  |                  |                 |                      |
+| created_at TIMESTAMP  |                      |                  |                  |                 |                      |
 
 - **_USER STORIES EXTENTIONS: TORNADO EXPERT-TIMED MODE_**
-  - **SCENE 1**  
+
+  - **SCENE 1**
     > As a user,  
-    When I select "Timed Mode",  
-    Then load up a list of "messages"
-  
+    > When I select "Timed Mode",  
+    > Then load up a list of "messages"
   - **SCENE 2**
     > As a user,  
-    When I select one message from the list,  
-    Then open up the message
-  
-  - ***SCENE 3**
+    > When I select one message from the list,  
+    > Then open up the message
+  - **\*SCENE 3**
     > As a user,  
-    When I click on an answer,
-    Then I will see the question and answer selected
-  - ***SCENE 4**
+    > When I click on an answer,
+    > Then I will see the question and answer selected
+  - **\*SCENE 4**
     > As a user,  
-    When I click the back button,  
-    Then I will be back at the list of messages
+    > When I click the back button,  
+    > Then I will be back at the list of messages
+
 - components updates
 - endpoint updates
 - features
+
   - dark mode
   - new user/returning user
   - flashlight story line
 
 - different game modes
   - tornado expert
-user logs in
-local or google oauth
-user has levels, saved data
-their user account has levels and achievements
+    user logs in
+    local or google oauth
+    user has levels, saved data
+    their user account has levels and achievements
 
 play out scenarios
 can try to save peopl
