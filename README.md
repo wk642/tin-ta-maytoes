@@ -1,5 +1,8 @@
 # tin-ta-maytoes
 
+## MVP Proposal
+👀 View my proposal [here](https://tintamaytoes.my.canva.site/)
+
 ## Requirements
 
 - [ ] use Postgres, express, react, node.js
@@ -79,13 +82,12 @@
 - [ ] if score is even, you survive,
 - [ ] if score is odd, you perish
 - [ ] schema:
-      | MVP QUESTIONS Table | MVP ROUNDS Table |
-      | --------------------- | --------------------- |
-      | id UUID [PK] | id UUID [PK] |
-      | qesution TEXT | points INTEGER |
-      | incorrect answer TEXT | created_at TIMESTAMP |
-      | correct answer TEXT | |
-      | created_at TIMESTAMP | |
+
+| MVP FAVORITES Table | MVP ROUNDS Table |
+| --------------------- | -------------------- |
+| id UUID [PK]          | id UUID [PK]         |
+| created_at TIMMESTAMP | points INTEGER       |
+|                       | created_at TIMESTAMP |
 
 ## Extensions
 
