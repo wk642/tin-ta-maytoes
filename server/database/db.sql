@@ -18,3 +18,8 @@ CREATE TABLE IF NOT EXISTS rounds (
 );
 
 -- FAVORITES tables
+CREATE TABLE IF NOT EXISTS favscenarios (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  favorites BOOLEAN, 
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)
