@@ -11,5 +11,10 @@ CREATE DATABASE tintamaytoes;
 
 -- CREATE tables
 -- ROUNDS tables
+CREATE TABLE IF NOT EXISTS rounds (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  points INTEGER,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
 -- FAVORITES tables
