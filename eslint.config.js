@@ -58,7 +58,7 @@ export default [
         { keywords: true, unnecessary: false, numbers: true },
       ],
       "@stylistic/comma-dangle": [
-        "error",
+        "warn",
         {
           arrays: "only-multiline",
           objects: "only-multiline",
