@@ -8,7 +8,7 @@
     "server": "nodemon server/server.js",
     "dev": "concurrently \"npm run client\" \"npm run server\"",
     "test": "jest",
-    "loadDB": "/usr/local/bin/psql -f server/database/dump.sql",
+    "loadDB": "/usr/local/bin/psql -f server/database/db.sql",
     "seed": "/usr/local/bin/psql -d tintamaytoes -f server/database/seed.sql",
     "build": "vite build",
     "lint": "eslint .",

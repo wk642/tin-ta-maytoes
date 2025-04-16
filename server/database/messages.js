@@ -1,4 +1,46 @@
+// questions - have 1 or more options
+// answers - player's selection of options in threads
+// options - 1 or more for each question, with follow up questions
+// threads - rounds of play, with a list of previously answered questions
 const MESSAGES = [
+  {
+    "id": 0,
+    "question": "A tin-ta-maytoe has been spotted 2 streets south of you heading north...",
+    "options": [
+      {
+        "id": 0,
+        "answer_text": "Make some french toast",
+        "value": 1,
+        "followup": 1
+      },
+      {
+        "id": 1,
+        "answer_text": "Grab the keys to your underground shelter",
+        "value": 2,
+        "followup": 3
+      },
+      {
+        "id": 2,
+        "answer_text": "Grab the keys to your underground shelter",
+        "value": 2,
+        "followup": 3
+      },
+    ]
+  },
+  {
+    "id": 1,
+    "question": "The tin-ta-maytoe, comes right above your french toast threatening to splatter tomatoes all over your french toast...",
+    "options": [
+      {
+        "answer_text": "Use your plate to cover the French Toast",
+        "isCorrect": false,
+        "followup": 2
+      },
+    ]
+  },
+];
+
+const MESSAGESold = [
   {
     // questions
       // category: intro questions
@@ -29,7 +71,11 @@ const MESSAGES = [
                           ],
                           "perish": [ 
                             {
-                              "result": "CONGRATS!!!!! If you love being burried in tomatoes! The tin-ta-maytoe came swirling through, with all the tomatoes dropping down from the sky, crushing your roof and filling your entire house with tomatoes. You eventually get smotthered in all the tomatoes Worst part of it, is you never even got to take a bite of that french toast.",
+                              "result": [
+                                "CONGRATS!!!!! If you love being burried in tomatoes! The tin-ta-maytoe came swirling through, with all the tomatoes dropping down from the sky, crushing your roof and filling your entire house with tomatoes. You eventually get smotthered in all the tomatoes Worst part of it, is you never even got to take a bite of that french toast.",
+
+                                "You tried using the french toast as a  shield, but the tomatoes broke right through it. A 6000lb tomatoes came flying down, hitting you right in the head, and you went to sleep and never woke up again."
+                              ]
                             }
                           ]
                         }
@@ -49,99 +95,3 @@ const MESSAGES = [
     // results    
   }
 ]
-
-
-const gameData = {
-  introQuestions: [
-    {
-      text: "What's your favorite way to spend a free weekend?",
-      options: [
-        {
-          text: "Relaxing at home with a good book/movie",
-          followUpQuestions: [
-            { text: "What genre do you usually prefer?", answerPool: ["Fantasy", "Sci-Fi", "Mystery", "Romance"] },
-            { text: "Do you prefer reading or watching?", answerPool: ["Reading", "Watching"] },
-          ],
-        },
-        {
-          text: "Getting active outdoors",
-          followUpQuestions: [
-            { text: "Do you enjoy individual or team sports more?", answerPool: ["Individual", "Team"] },
-            { text: "What's your favorite outdoor activity?", answerPool: ["Hiking", "Cycling", "Swimming"] },
-          ],
-        },
-        {
-          text: "Socializing with friends",
-          followUpQuestions: [
-            { text: "What's your go-to activity when hanging out with friends?", answerPool: ["Going out to eat", "Playing games", "Having deep conversations"] },
-            { text: "Do you prefer small gatherings or large parties?", answerPool: ["Small gatherings", "Large parties"] },
-          ],
-        },
-      ],
-    },
-    {
-      text: "What kind of food do you enjoy the most?",
-      options: [
-        {
-          text: "Savory dishes",
-          followUpQuestions: [
-            { text: "Do you prefer spicy or mild flavors?", answerPool: ["Spicy", "Mild"] },
-            { text: "What's your favorite type of cuisine?", answerPool: ["Italian", "Mexican", "Asian"] },
-          ],
-        },
-        {
-          text: "Sweet treats",
-          followUpQuestions: [
-            { text: "Do you prefer chocolate or fruity desserts?", answerPool: ["Chocolate", "Fruity"] },
-            { text: "What's your favorite kind of baked good?", answerPool: ["Cake", "Cookies", "Pie"] },
-          ],
-        },
-      ],
-    },
-    {
-      text: "What's your preferred way to learn something new?",
-      options: [
-        {
-          text: "Reading and research",
-          followUpQuestions: [
-            { text: "Do you prefer physical books or digital resources?", answerPool: ["Physical books", "Digital resources"] },
-            { text: "What kind of topics are you most interested in learning about?", answerPool: ["Science", "History", "Art"] },
-          ],
-        },
-        {
-          text: "Hands-on experience",
-          followUpQuestions: [
-            { text: "Do you learn better by yourself or with others?", answerPool: ["By myself", "With others"] },
-            { text: "What's a skill you'd like to learn through practice?", answerPool: ["Coding", "Cooking", "Playing an instrument"] },
-          ],
-        },
-        {
-          text: "Watching videos or lectures",
-          followUpQuestions: [
-            { text: "Do you prefer short-form or long-form content?", answerPool: ["Short-form", "Long-form"] },
-            { text: "Who is your favorite type of educator?", answerPool: ["Entertaining", "Informative", "Interactive"] },
-          ],
-        },
-      ],
-    },
-    {
-      text: "What's your ideal travel destination like?",
-      options: [
-        {
-          text: "A bustling city",
-          followUpQuestions: [
-            { text: "Do you prefer historical or modern cities?", answerPool: ["Historical", "Modern"] },
-            { text: "What's the most important aspect of a city trip for you?", answerPool: ["Culture", "Food", "Nightlife"] },
-          ],
-        },
-        {
-          text: "A peaceful natural setting",
-          followUpQuestions: [
-            { text: "Do you prefer mountains or beaches?", answerPool: ["Mountains", "Beaches"] },
-            { text: "What kind of activities do you enjoy in nature?", answerPool: ["Hiking", "Relaxing", "Wildlife watching"] },
-          ],
-        },
-      ],
-    },
-  ],
-};
