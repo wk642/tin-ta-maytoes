@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://tin-ta-matoes/schema",
+  "title": "Json Schema for the Tin-Ta-Matoes API",
+  "type": "object",
+  "properties": {
+    "threads": {"type": "array", "items":{"$ref": "/schema/thread"}},
+    "thread": {"$ref": "/schema/thread"}
+  },
+  "$defs": { 
+    "thread": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "questions": {
+          "type": "array", 
+          "items": {"$ref": "/schema/question"}
+        }
+      },
+      "required": ["id"],
+      "additionalProperties": "false"
+    }, 
+    "question":{
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "text": {
+          "type": "string"
+        },
+        "selected_choice": {
+          "$ref": "choice"
+        },
+        "choices": {
+          "type": "array",
+          "items": {"$ref": "/schema/choice"}
+        }
+      },
+      "required": ["id", "text"],
+      "additionalProperties": "false"
+    }, 
+    "choice":{
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "text": {
+          "type": "string"              
+        }
+      },
+      "required": ["id", "text"],
+      "additionalProperties": "false"
+    }
+  }
+}

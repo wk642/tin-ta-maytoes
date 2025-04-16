@@ -1,4 +1,4 @@
-import baseconfig from '../eslint.config';
+import baseconfig from '../eslint.config.js';
 import globals from 'globals';
 
 export default [

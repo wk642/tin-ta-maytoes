@@ -30,9 +30,9 @@
   },
   "files.associations": {
     "*.ps": "powershell",
-    "*.json": "jsonc",
+    "*.json": "json",
     "*.jsonpb": "json",
-    "*.sql": "postgres"
+    "*.sql": "sql"
   },
   "markdownlint.config": {
     "MD013": false,
@@ -45,13 +45,10 @@
   "tasks-panel.search.gulpTasks": false,
   "tasks-panel.search.npmTasks": true,
   "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "[xml]": {
-    "editor.defaultFormatter": "DotJoshJohnson.xml"
   },
   "eslint.useFlatConfig": true,
   "eslint.validate": [

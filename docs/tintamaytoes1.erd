@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="tintamaytoes1">
+	<entities>
+		<data-source id="postgres-jdbc-1963ee5ebfd-221556ef857f66ba">
+			<entity id="1" name="threads" fq-name="public.threads">
+				<path name="public"/>
+				<path name="tintamaytoes"/>
+			</entity>
+			<entity id="2" name="questions" fq-name="public.questions">
+				<path name="public"/>
+				<path name="tintamaytoes"/>
+			</entity>
+			<entity id="3" name="choices" fq-name="public.choices">
+				<path name="public"/>
+				<path name="tintamaytoes"/>
+			</entity>
+			<entity id="4" name="followup" fq-name="public.followup">
+				<path name="public"/>
+				<path name="tintamaytoes"/>
+			</entity>
+			<entity id="5" name="threadquestions" fq-name="public.threadquestions">
+				<path name="public"/>
+				<path name="tintamaytoes"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="threadquestions_threads_fk" fq-name="public.threadquestions.threadquestions_threads_fk" type="fk" pk-ref="1" fk-ref="5"/>
+		<relation name="choices_questions_fk" fq-name="public.choices.choices_questions_fk" type="fk" pk-ref="2" fk-ref="3"/>
+		<relation name="followup_questions_fk" fq-name="public.followup.followup_questions_fk" type="fk" pk-ref="2" fk-ref="4"/>
+		<relation name="threadquestions_questions_fk" fq-name="public.threadquestions.threadquestions_questions_fk" type="fk" pk-ref="2" fk-ref="5"/>
+		<relation name="followup_choices_fk" fq-name="public.followup.followup_choices_fk" type="fk" pk-ref="3" fk-ref="4"/>
+		<relation name="threadquestions_choices_fk" fq-name="public.threadquestions.threadquestions_choices_fk" type="fk" pk-ref="3" fk-ref="5"/>
+	</relations>
+</diagram>
