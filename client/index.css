@@ -1,1 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+
 @import "tailwindcss";
+
+@theme {
+  --font-cbyg: "Covered By Your Grace", cursive;
+} 
