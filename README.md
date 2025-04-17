@@ -160,3 +160,7 @@ schema
 user table with auth
 question table
 add category
+
+## Attributions
+
+- [ ] [Animated icons](https://animatedicons.co/)
