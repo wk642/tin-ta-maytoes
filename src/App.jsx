@@ -4,6 +4,7 @@ import playIconGif from './assets/icons/playIconGif.gif';
 import playIconStatic from './assets/icons/playIconStatic.png';
 
 export default function App() {
+  
   return (
     <main>
       <div className="font-cbyg flex flex-col h-screen bg-orange-300 overflow-hidden">
