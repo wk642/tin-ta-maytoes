@@ -25,7 +25,7 @@ export default function App() {
         <h1 className="text-gameTitle ml-90 -mt-35">Maytoes</h1>
 
         <div className="flex justify-start -mt-20 ml-160 relative w-fit h-fit group">
-          <div className="w-20 h-20 bg-contain bg-no-repeat" style={{ backgroundImage: `url('${playIconStatic}')` }}>
+          <div className="w-20 h-20 bg-contain bg-no-repeat group-hover:animate-bounce" style={{ backgroundImage: `url('${playIconStatic}')` }}>
             <div className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100 bg-contain bg-no-repeat" style={{ backgroundImage: `url('${playIconGif}')` }} />
           </div>
         </div>
