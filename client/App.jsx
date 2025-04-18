@@ -1,4 +1,4 @@
-import TinTaMaytoesIcon from './assets/TinTaMaytoesIcon';
+import TinTaMaytoesIcon from 'client/assets/TinTaMaytoesIcon.png';
 import NameExplanation from './assets/videos/NameExplanation.mp4';
 import playIconGif from './assets/icons/playIconGif.gif';
 import playIconStatic from './assets/icons/playIconStatic.png';
