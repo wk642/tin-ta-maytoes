@@ -4,7 +4,7 @@ export default defineConfig({
   root: path.resolve(__dirname, 'client'), // set root to your client folder
   resolve: {
     alias: {
-      src: path.resolve(__dirname, 'client'), // so 'src/' points to 'client/'
+      src: path.resolve(__dirname, 'src'), // so 'src/' points to 'client/'
     },
   },
   build: {
