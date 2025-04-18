@@ -9,7 +9,8 @@ CREATE DATABASE tintamaytoes;
 -- connect to the database
 \connect tintamaytoes;
 
--- public.threads definition
+-- CREATE tables
+-- threads
 
 CREATE TABLE threads (
 	id serial4 NOT NULL,
@@ -21,7 +22,7 @@ CREATE TABLE threads (
 );
 
 
--- public.questions definition
+-- questions
 
 CREATE TABLE questions (
 	id serial4 NOT NULL,
@@ -30,7 +31,7 @@ CREATE TABLE questions (
 );
 
 
--- public.choices definition
+-- choices
 
 CREATE TABLE choices (
 	id serial4 NOT NULL,
@@ -42,7 +43,7 @@ CREATE TABLE choices (
 );
 
 
--- public.followup definition
+-- followup
 
 CREATE TABLE followup (
 	choice_id int4 NOT NULL,
@@ -52,7 +53,7 @@ CREATE TABLE followup (
 );
 
 
--- public.threadquestions definition
+-- threadquestions
 
 CREATE TABLE threadquestions (
 	thread_id int4 NOT NULL,
