@@ -39,7 +39,7 @@ export default function App() {
           onClick={handlePlayButtonClick}
         >
           <div className="w-20 h-20 bg-contain bg-no-repeat" style={{ backgroundImage: `url('${playIconStatic}')` }}>
-            <div className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100 bg-contain bg-no-repeat" style={{ backgroundImage: `url('${playIconGif}')` }} />
+            <div className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100 bg-contain bg-no-repeat animation-bounce" style={{ backgroundImage: `url('${playIconGif}')` }} />
           </div>
         </div>
       </div>
