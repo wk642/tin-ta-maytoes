@@ -1,9 +1,14 @@
+import { defineConfig } from 'vite'
+import path from 'path'
 export default defineConfig({
-  build: {
-    ssr: true, 
-    outDir: 'dist/server',
-    rollupOptions: {
-      input: 'src/entry-server.js',
+  root: path.resolve(__dirname, 'client'), // set root to your client folder
+  resolve: {
+    alias: {
+      src: path.resolve(__dirname, 'client'), // so 'src/' points to 'client/'
     },
-  }
-});
+  },
+  build: {
+    outDir: path.resolve(__dirname, 'dist'),
+    emptyOutDir: true,
+  },
+})
