@@ -15,11 +15,43 @@ import bgImage from '../assets/bgImage.png';
 
 export default function GameMenu() {
   return (
-    <div className="font-cbyg bg-contain bg-no-repeat bg-orange-300 w-screen h-screen overflow-hidden" style={{ backgroundImage: `url('${bgImage}')` }}>
-      <h2 className="text-9xl ml-50 mt-15">MENU</h2>
-      <button className="text-5xl ml-58 mt-5 bg-white"> SCENARIO </button>
-      <button className="text-5xl ml-58 mt-5"> TORNADO EXPERT </button>
-      <button className="text-5xl ml-58 mt-5"> SUGGESTIONS </button>
-    </div>
+    <main>
+      <div className="font-cbyg bg-cover bg-no-repeat bg-orange-300 w-screen h-screen overflow-hidden" style={{ backgroundImage: `url('${bgImage}')` }} />
+      <div className="flex flex-col items-center">
+        <h2 className="text-9xl mt-15 mb-8 text-center">MENU</h2>
+        <div className="flex flex-col w-full items-center">
+          <div className="flex items-center w-3/4 mb-4 max-w-[80%] self-start">
+            <div className="mr-2 h-12 w-12 rounded-full bg-gray-400 flex items-center justify-center">
+              <UserCircle className="h-8 w-8 text-white" />
+            </div>
+            <button
+              className="text-3xl bg-white/80 text-gray-800 rounded-xl p-4 shadow-md flex-1"
+            >
+              SCENARIO
+            </button>
+          </div>
+          <div className="flex items-center w-3/4 mb-4 max-w-[80%] self-end">
+            <button
+              className="text-3xl bg-white/80 text-gray-800 rounded-xl p-4 shadow-md flex-1"
+            >
+              TORNADO EXPERT
+            </button>
+            <div className="ml-2 h-12 w-12 rounded-full bg-gray-400 flex items-center justify-center">
+              <UserCircle className="h-8 w-8 text-white" />
+            </div>
+          </div>
+          <div className="flex items-center w-3/4 max-w-[80%] self-start">
+           <div className="mr-2 h-12 w-12 rounded-full bg-gray-400 flex items-center justify-center">
+              <UserCircle className="h-8 w-8 text-white" />
+            </div>
+            <button
+              className="text-3xl bg-white/80 text-gray-800 rounded-xl p-4 shadow-md flex-1"
+            >
+              SUGGESTIONS
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
   );
-}
+};
