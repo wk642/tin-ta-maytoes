@@ -12,15 +12,9 @@
 */
 
 import bgImage from "../assets/bgImage.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleUser } from "@fortawesome/free-regular-svg-icons";
-import HomeIcon from "./HomeIcon";
-import userProfileGif from "../assets/icons/userProfileGif.gif";
-import userProfileStatic from "../assets/icons/userProfileStatic.png";
 import ProfileImageLeft from "./ProfileImageLeft";
-import SettingsIcon from "./SettingsIcon";
 
-export default function GameMenu( {handleHomeButtonClick, handleSettingsButtonClick} ) {
+export default function GameMenu() {
   return (
     <main>
       <div className="bg-cover bg-no-repeat fixed bg-orange-300 w-screen h-screen overflow-hidden" style={{ backgroundImage: `url('${bgImage}')`, backgroundSize: 'contain', backgroundPosition: 'center',}}>
