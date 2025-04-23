@@ -6,7 +6,7 @@ import GameLayout from './components/GameLayout';
 export default function App () {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App font-cbyg">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/gameLayout" element={<GameLayout />} /> 
