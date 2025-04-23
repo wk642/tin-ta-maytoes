@@ -18,15 +18,18 @@ import HomeIcon from "./HomeIcon";
 import userProfileGif from "../assets/icons/userProfileGif.gif";
 import userProfileStatic from "../assets/icons/userProfileStatic.png";
 import ProfileImageLeft from "./ProfileImageLeft";
+import SettingsIcon from "./SettingsIcon";
 
-export default function GameMenu( {handleHomeButtonClick} ) {
+export default function GameMenu( {handleHomeButtonClick, handleSettingsButtonClick} ) {
   return (
     <main>
       <div className="font-cbyg bg-cover bg-no-repeat fixed bg-orange-300 w-screen h-screen overflow-hidden" style={{ backgroundImage: `url('${bgImage}')`, backgroundSize: 'contain', backgroundPosition: 'center',}}>
 
-        <div className="fixed top-40 right-115 flex gap-10">
-          <HomeIcon handleHomeButtonClick={handleHomeButtonClick}/>
+        <div className="fixed top-40 flex ml-42 gap-1 justify-content">
+          <HomeIcon handleHomeButtonClick={handleHomeButtonClick} />
+          <SettingsIcon handleSettingsButtonClick={handleSettingsButtonClick} /> 
         </div>
+
         <div className="flex flex-col">
           <div className="flex flex-col ml-70 w-85">
 
