@@ -23,12 +23,7 @@ import SettingsIcon from "./SettingsIcon";
 export default function GameMenu( {handleHomeButtonClick, handleSettingsButtonClick} ) {
   return (
     <main>
-      <div className="font-cbyg bg-cover bg-no-repeat fixed bg-orange-300 w-screen h-screen overflow-hidden" style={{ backgroundImage: `url('${bgImage}')`, backgroundSize: 'contain', backgroundPosition: 'center',}}>
-
-        <div className="fixed top-40 flex ml-42 gap-1 justify-content">
-          <HomeIcon handleHomeButtonClick={handleHomeButtonClick} />
-          <SettingsIcon handleSettingsButtonClick={handleSettingsButtonClick} /> 
-        </div>
+      <div className="bg-cover bg-no-repeat fixed bg-orange-300 w-screen h-screen overflow-hidden" style={{ backgroundImage: `url('${bgImage}')`, backgroundSize: 'contain', backgroundPosition: 'center',}}>
 
         <div className="flex flex-col">
           <div className="flex flex-col ml-70 w-85">
