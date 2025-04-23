@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import TinTaMaytoesIcon from "../assets/TinTaMaytoesIcon.png";
 import NameExplanation from '../assets/videos/NameExplanation.mp4';
 import playIconStatic from '../assets/icons/playIconStatic.png';
