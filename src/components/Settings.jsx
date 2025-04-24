@@ -5,3 +5,11 @@
     - allows users to adjust voilume
     - allow future game settings
 */
+
+export default function Settings() {
+  return (
+    <>
+      Settings
+    </>
+  )
+}

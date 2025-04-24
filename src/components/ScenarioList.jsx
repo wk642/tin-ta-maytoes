@@ -9,3 +9,11 @@
     - show a list of "threads"
     - newest round or in play round will be the top thread <- this might be a new componenet
 */
+
+export default function ScenarioList() {
+  return (
+    <>
+      ScenarioList
+    </>
+  )
+}
