@@ -28,8 +28,8 @@ export default function Home() {
 
         <Link to="/gameMenu" className="flex justify-start -mt-20 ml-160 relative w-fit h-fit group cursor-pointer">
           {/* Play Icon  */}
-          <div className="w-20 h-20 bg-contain bg-no-repeat" style={{ backgroundImage: `url('${playIconStatic}')` }}>
-            <div className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100 bg-contain bg-no-repeat animate-bounce" style={{ backgroundImage: `url('${playIconGif}')` }} />
+          <div className="w-20 h-20 bg-contain bg-no-repeat group-hover:animate-bounce" style={{ backgroundImage: `url('${playIconStatic}')` }}>
+            <div className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100 bg-contain bg-no-repeat" style={{ backgroundImage: `url('${playIconGif}')` }} />
           </div>  
         </Link>
       </div>
