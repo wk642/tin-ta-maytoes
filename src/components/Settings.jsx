@@ -25,27 +25,20 @@ export default function Settings() {
 
   return (
     <main>
-      <div className="bg-slate-500/40 items-center justify-content mt-10  w-23 ml-57">
-        <h1 className="text-4xl fixed top-30 justify-content">Settings</h1>
-        <img src={LightMode} />
-        {/* <Switch
-          checked={checked}
-          onChange={handleDarkLightModeChange}
-        /> */}
+      <header className="bg-slate-500/40 items-center justify-content mt-11  w-102 h-18 ml-57">
+        <h1 className="text-4xl fixed mt-3 ml-34 justify-content">Settings</h1>
+      </header>
 
-        <div className="flex items-center gap-4">
-          <img src={VolumeDown} className="h-6 w-6 text-gray-500" />
-            {/* <Slider
-              value={volume}
-              onValueChange={handleVolumeChange}
-              max={100}
-              step={1}
-              className="w-full sm:w-[300px]"
-            /> */}
-              
-          <img src={VolumeUp} className="h-6 w-6 text-gray-500" />
-          <span className="text-base sm:text-lg">{volume[0]}%</span>
-        </div>
+      {/* Light / Dark Mode */}
+      <div className="mt-5 ml-90">
+        <img src={LightMode}/>
+      </div>
+
+      {/* Volume */}
+      <div className="flex items-center gap-4 ml-70">
+        <img src={VolumeDown} className="text-gray-500" />
+            
+        <img src={VolumeUp} className="text-gray-500" />
       </div>
     </main>
   )
