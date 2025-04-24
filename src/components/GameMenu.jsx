@@ -11,14 +11,12 @@
     - Suggestions
 */
 
-import bgImage from "../assets/bgImage.png";
 import ProfileImageLeft from "./ProfileImageLeft";
 
 export default function GameMenu() {
   return (
     <main>
-      <div className="bg-cover bg-no-repeat fixed bg-orange-300 w-screen h-screen overflow-hidden" style={{ backgroundImage: `url('${bgImage}')`, backgroundSize: 'contain', backgroundPosition: 'center',}}>
-
+      <div>
         <div className="flex flex-col">
           <div className="flex flex-col ml-70 w-85">
 
