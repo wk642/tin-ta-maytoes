@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import settingsStatic from "../assets/icons/settingsStatic.png";
 import settingsGif from "../assets/icons/settingsGif.gif";
 
-export default function HomeIcon ({ handleSettingsButtonClick }) {
+export default function SettingsIcon ({ handleSettingsButtonClick }) {
   return (
     <Link to="/settings"
       className="flex justify-start -mt-20 -ml-25 relative w-fit h-fit group cursor-pointer"
