@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   build: {
-    outDir: path.resolve(__dirname, '../dist'), // render will be putting docs into dist, set dist
+    outDir: path.resolve(__dirname, '../dist/client'), 
     emptyOutDir: true,
   },
   plugins: [
