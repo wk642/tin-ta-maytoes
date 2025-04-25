@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router';
 import Home from "./components/Home";
 import GameLayout from './components/GameLayout';
 import GameMenu from './components/GameMenu';
-import GamePlay from './components/GamePlay';
+import GamePlay from './components/ScenarioGamePlay';
 import GameStats from './components/GameStats';
 import Settings from './components/Settings';
 import Leaderboard from './components/Leaderboard';
@@ -37,6 +37,10 @@ export default function App() {
 
             <Route path="/storyModeMenu"
               element={<GameLayout content={<StoryModeMenu />}/>}
+            />
+
+            <Route path="/scenarioGamePlay"
+              element={<GameLayout content={<ScenarioGamePlay />}/>}
             />
           </Routes>
         </div>
