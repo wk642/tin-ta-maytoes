@@ -8,6 +8,7 @@ import GamePlay from './components/GamePlay';
 import GameStats from './components/GameStats';
 import Settings from './components/Settings';
 import Leaderboard from './components/Leaderboard';
+import StoryModeMenu from './components/StoryModeMenu';
 export default function App() {
   return (
     <main>
@@ -35,6 +36,9 @@ export default function App() {
               element={<GameLayout content={<Leaderboard />}/>} 
             />
 
+            <Route path="/storyModeMenu"
+              element={<GameLayout content={<StoryModeMenu />}/>}
+            />
           </Routes>
         </div>
       </BrowserRouter>
