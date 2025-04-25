@@ -30,7 +30,8 @@
     "nodemon": "^3.1.9",
     "openai": "^4.92.1",
     "pg-promise": "^11.13.0",
-    "react": "^19.1.0"
+    "react": "^19.1.0",
+    "rollup": "^4.40.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.26.9",
