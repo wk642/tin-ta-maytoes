@@ -11,6 +11,7 @@
 
 import HomeIcon from "./HomeIcon";
 import SettingsIcon from "./SettingsIcon";
+import LeaderboardIcon from "./LeaderboardIcon";
 
 export default function GameStats() {
   return (
@@ -18,6 +19,7 @@ export default function GameStats() {
       <div className="fixed top-40 flex ml-42 gap-1 justify-content">
         <HomeIcon />
         <SettingsIcon />
+        <LeaderboardIcon />
       </div>
 
       {/* Tableau - game stats*/}
