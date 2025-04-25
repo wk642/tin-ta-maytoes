@@ -10,7 +10,7 @@
     "test": "jest",
     "loadDB": "/usr/local/bin/psql -f server/database/db.sql",
     "seed": "/usr/local/bin/psql -d tintamaytoes -f server/database/seed.sql",
-    "build": "vite build client",
+    "build client": "vite build client",
     "lint": "eslint .",
     "preview": "vite preview client"
   },
