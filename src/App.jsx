@@ -7,7 +7,7 @@ import GameMenu from './components/GameMenu';
 import GamePlay from './components/GamePlay';
 import GameStats from './components/GameStats';
 import Settings from './components/Settings';
-
+import Leaderboard from './components/Leaderboard';
 export default function App() {
   return (
     <main>
@@ -29,6 +29,10 @@ export default function App() {
 
             <Route path="/gameMenu" 
               element={<GameLayout content={<GameMenu />}/>} 
+            />
+
+            <Route path="/leaderboard" 
+              element={<GameLayout content={<Leaderboard />}/>} 
             />
 
           </Routes>
