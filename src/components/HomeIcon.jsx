@@ -1,7 +1,7 @@
 import React from "react";
 import homeStatic from "../assets/icons/homeStatic.png";
 import homeGif from "../assets/icons/homeGif.gif";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 export default function HomeIcon ({ handleHomeButtonClick }) {
   return (
     <Link to="/"
