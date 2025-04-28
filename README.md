@@ -1,7 +1,7 @@
 # tin-ta-maytoes
 
 Welcome to the world of Tin-Ta-Maytoes! 
-Currently availble live: 
+Currently availble [live](https://tin-ta-maytoes-client.onrender.com/): 
  - [ ] the mini game scenario mode version
 Coming soon:
  - [ ] Story mode
