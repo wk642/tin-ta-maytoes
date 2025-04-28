@@ -1,13 +1,15 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router";
 import Home from "./components/Home";
-import GameLayout from './components/GameLayout';
-import GameMenu from './components/GameMenu';
-import GamePlay from './components/ScenarioGamePlay';
-import GameStats from './components/GameStats';
-import Settings from './components/Settings';
-import Leaderboard from './components/Leaderboard';
-import StoryModeMenu from './components/StoryModeMenu';
+import GameLayout from "./components/GameLayout";
+import GameMenu from "./components/GameMenu";
+import ScenarioList from "./components/ScenarioList";
+import ScenarioGamePlay from "./components/ScenarioGamePlay";
+import GameStats from "./components/GameStats";
+import Settings from "./components/Settings";
+import Leaderboard from "./components/Leaderboard";
+import StoryModeMenu from "./components/StoryModeMenu";
+
 export default function App() {
   return (
     <main>
@@ -17,10 +19,6 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/gameStats" 
               element={<GameLayout content={<GameStats />}/>} 
-            />
-
-            <Route path="/gamePlay" 
-              element={<GameLayout content={<GamePlay />}/>} 
             />
 
             <Route path="/settings"
@@ -42,6 +40,11 @@ export default function App() {
             <Route path="/scenarioGamePlay"
               element={<GameLayout content={<ScenarioGamePlay />}/>}
             />
+
+            <Route path="/scenarioList"
+              element={<GameLayout content={<ScenarioList />}/>}
+            />
+
           </Routes>
         </div>
       </BrowserRouter>

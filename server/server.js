@@ -25,6 +25,30 @@ app.get("/test-connection", function(req, res) {
 // Combine the questions and  choices
 // Send the response back
 
+// GET a random question with ID 4 or 5
+app.get("/initialQuestion", async (req, res) => {
+  const initialQuestionIds = [4, 5];
+  const randomId = initialQuestionIds[Math.floor(Math.random() * initialQuestionIds.length)];
+
+  try {
+    const question = await db.one("SELECT id, text FROM questions WHERE id = $1", [randomId]);
+    res.json(question);
+  } catch (error) {
+    console.error("Error fetching random initial question:", error);
+    res.status(500).json({ error: "Failed to fetch question" });
+  }
+});
+
+// GET all the questions for scenario list
+app.get("/allquestions", async (req, res) => {
+  try {
+    const questions = await db.manyOrNone("SELECT text FROM questions");
+    res.json(questions.map(questions => questions.text)); 
+  } catch (error) {
+    console.error("Error fetching all questions:", error);
+    res.status(500).json({ error: "Failed to fetch questions" });
+  }
+});
 app.listen(port, function() {
   console.log("Server is running on port " + port);
 });
