@@ -33,10 +33,10 @@ export default function GameMenu() {
             </div>
 
             <div className="flex items-center w-3/4 mb-4 max-w-[80%] self-start">
-              <div className="h-12 w-12 flex items-center justify-center mb-6 -ml-1">
+              <div className="h-12 w-12 flex items-center justify-center mb-6 -ml-4">
                 <ProfileImageLeft />
                 <Link to="/storyModeMenu">
-                  <button className="text-3xl mr-2 bg-[#60B5FF] text-gray-800 rounded-xl ml-4 pl-4 pr-4 pt-2 pb-2 shadow-md flex-1 hover:ring-2 hover:ring-orange-400 ">STORY</button>
+                  <button className="text-3xl mr-2 bg-[#60B5FF] text-gray-800 rounded-xl ml-4 pl-4 pr-4 pt-2 pb-2 shadow-md flex-1 hover:ring-2 hover:ring-orange-400">STORY</button>
                 </Link>
               </div>
             </div>

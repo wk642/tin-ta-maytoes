@@ -1,14 +1,25 @@
-import React from "react";
-import userProfileStatic from "../assets/icons/userProfileStatic.png";
-import userProfileGif from "../assets/icons/userProfileGif.gif";
+import React, { useState, useEffect } from "react";
 
-export default function ProfileImageLeft () {
+export default function ProfileImageLeft() {
+  const [botttsAvatarUrl, setBotttsAvatarUrl] = useState('');
+  const [seed, setSeed] = useState('sara'); 
+
+  useEffect(() => {
+    const fetchBotttsAvatar = async () => {
+      const style = 'bottts';
+      const apiUrl = `https://api.dicebear.com/7.x/${style}/svg?seed=${seed}`;
+      setBotttsAvatarUrl(apiUrl);
+    };
+
+    fetchBotttsAvatar();
+  }, [seed]);
+
   return (
-    <div className="flex justify-start ml-30 relative w-fit h-fit group">
-      <div className="w-10 h-10 bg-contain bg-no-repeat relative"
-      style={{ backgroundImage: `url('${userProfileStatic}')` }}>
-        <div className="absolute -inset-1 opacity-0 transition-opacity group-hover:opacity-100 bg-contain bg-no-repeat animation-bounce" style={{ backgroundImage: `url('${userProfileGif}')` }} />
-      </div>
+    <div className="flex justify-items-stret ml-25 relative w-fit h-fit group">
+      <div
+        className="w-10 h-10 bg-contain bg-no-repeat relative"
+        style={{ backgroundImage: `url('${botttsAvatarUrl}')` }}
+      />
     </div>
   );
-};
+}
