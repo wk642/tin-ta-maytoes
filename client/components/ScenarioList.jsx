@@ -14,9 +14,10 @@ export default function ScenarioList() {
   useEffect(() => {
     const fetchQuestion4 = async () => {
       try {
-        // For MVP just show question 4
-        const response = await fetch('http://localhost:5000/initialQuestion?id=4'); 
-
+        // Just show question 4
+        // const response = await fetch('http://localhost:5000/initialQuestion?id=4'); 
+        // get it to ranomly pick between 4 and 5 
+        const response = await fetch('http://localhost:5000/initialQuestion');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
