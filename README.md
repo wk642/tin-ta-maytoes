@@ -1,5 +1,27 @@
 # tin-ta-maytoes
 
+Welcome to the world of Tin-Ta-Maytoes! 
+Currently availble [live](https://tin-ta-maytoes-client.onrender.com/): 
+ - [ ] the mini game scenario mode version
+Coming soon:
+ - [ ] Story mode
+   - [ ] Timed
+   - [ ] Tornado Expert
+- [ ] Change volume
+- [ ] Change dark light mode
+
+## How to run my project locally if you would like to contribute
+
+1. Clone my project
+2. In my project's directroy run `npm install`
+3. To create the database and tables `npm run loadDB`
+4. To add the questions and choices `npm run seed`
+5. To run it locally run `npm run dev`
+
+## Demo of what is happening right now
+
+![demo](https://github.com/user-attachments/assets/325f7c19-bacb-4a7d-92d2-61c882e95908)
+
 ## Requirements
 
 - [ ] use Postgres, express, react, node.js
