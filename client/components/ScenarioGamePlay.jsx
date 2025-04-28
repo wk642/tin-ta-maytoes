@@ -98,7 +98,7 @@ export default function ScenarioGamePlay() {
             ) : (
               <p>Error: Could not load choices.</p>
             )}
-          </>
+        </>
         )}
       </section>
     </main>
