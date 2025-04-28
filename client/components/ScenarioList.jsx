@@ -65,7 +65,7 @@ export default function ScenarioList() {
       </header>
 
       {/* Sub Title */}
-      <section className="mt-2 ml-62 w-97">
+      <section className="mt-2 ml-62 w-97 text-2xl">
         <h2 className="text-2xl border-b-4">Current Scenario</h2> 
         <ul className="mt-4 border-b-4">
           <li key={question.id} className="flex items-center mb-2">
