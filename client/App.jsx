@@ -37,14 +37,13 @@ export default function App() {
               element={<GameLayout content={<StoryModeMenu />}/>}
             />
 
-            <Route path="/scenarioGamePlay"
+            <Route path="/scenarioGamePlay/:id"
               element={<GameLayout content={<ScenarioGamePlay />}/>}
             />
 
             <Route path="/scenarioList"
               element={<GameLayout content={<ScenarioList />}/>}
             />
-
           </Routes>
         </div>
       </BrowserRouter>
