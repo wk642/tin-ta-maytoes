@@ -1,6 +1,7 @@
 import express, { json } from "express";
 import cors from "cors";
 import pgPromise from "pg-promise";
+import 'dotenv/config';
 
 const app = express();
 const port = 5000;
@@ -10,7 +11,7 @@ app.use(json());
 
 // connect to database
 const pgp = pgPromise();
-const db = pgp("postgres://tpl622_6@localhost:5432/tintamaytoes");
+const db = pgp(process.env.TINTAMAYTOES_DB_URL);
 
 // Testing to make sure it connects to the back end
 app.get("/test-connection", function(req, res) {
