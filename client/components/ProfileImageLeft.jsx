@@ -15,7 +15,7 @@ export default function ProfileImageLeft() {
   }, [seed]);
 
   return (
-    <div className="flex justify-items-stret ml-25 relative w-fit h-fit group">
+    <div className="profile-image-div justify-items-stret ml-25 relative w-fit h-fit group">
       <div
         className="w-10 h-10 bg-contain bg-no-repeat relative"
         style={{ backgroundImage: `url('${botttsAvatarUrl}')` }}
