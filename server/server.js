@@ -11,6 +11,7 @@ app.use(json());
 
 // connect to database
 const pgp = pgPromise();
+console.log("db_url", process.env_TINTAMAYTOES_DB_URL);
 const db = pgp(process.env.TINTAMAYTOES_DB_URL);
 
 // Testing to make sure it connects to the back end
