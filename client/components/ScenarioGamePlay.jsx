@@ -1,10 +1,11 @@
 // ScenarioGamePlay.jsx
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router'; 
+import { Link, useParams } from 'react-router';
 import backStatic from "../assets/icons/backStatic.png";
 import backGif from "../assets/icons/backGif.gif";
 import userProfileStatic from "../assets/icons/userProfileStatic.png";
 import constants from "../constants";
+// import ProfileImageLeft from './ProfileImageLeft';
 
 export default function ScenarioGamePlay() {
   const { id } = useParams();
@@ -12,6 +13,9 @@ export default function ScenarioGamePlay() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [resultMessage, setResultMessage] = useState(null);
+  const [userChoiceText, setUserChoiceText] = useState(null);
+  const [showDotDotDot, setShowDotDotDot] = useState(false);
+  const [choicesVisible, setChoicesVisible] = useState(true);
 
   useEffect(() => {
     const fetchQuestionDetails = async () => {
@@ -36,13 +40,32 @@ export default function ScenarioGamePlay() {
     }
   }, [id]);
 
-  const handleAnswer = (selectedValue) => {
-    if (selectedValue === 2) {
+  // handle the answer
+  const handleAnswer = async (selectedValue, selectedText) => {
+    setUserChoiceText(`You selected: ${selectedText}`);
+    setShowDotDotDot(true);
+    setChoicesVisible(false);
+
+    // Add a animated ... so that it looks like it is typing
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    setShowDotDotDot(false);
+
+    if (questionData && questionData.correctAnswerValue === selectedValue) {
       setResultMessage("You survived!");
-    } else if (selectedValue === 1) {
+    } else {
       setResultMessage("You did not survive!");
     }
   };
+
+  // create the animation of 
+  const DotDotDotAnimation = () => (
+    <div className='flex space-x-2 justify-start items-center'>
+      <span className='sr-only'>Loading...</span>
+      <div className='h-3 w-3 bg-gray-500 rounded-full animate-bounce [animation-delay:-0.3s]'></div>
+      <div className='h-3 w-3 bg-gray-500 rounded-full animate-bounce [animation-delay:-0.20s]'></div>
+      <div className='h-3 w-3 bg-gray-500 rounded-full animate-bounce'></div>
+    </div>
+  );
 
   if (loading) {
     return <p>Loading scenario gameplay...</p>;
@@ -51,7 +74,7 @@ export default function ScenarioGamePlay() {
   if (error) {
     return <p>Error loading scenario: {error}</p>;
   }
-
+  
   if (!questionData) {
     return <p>No scenario data loaded.</p>;
   }
@@ -73,34 +96,39 @@ export default function ScenarioGamePlay() {
           <div className="w-11 h-11 ml-15 bg-contain bg-no-repeat"
             style={{ backgroundImage: `url('${userProfileStatic}')` }}>
           </div>
-          
           <h1 className="text-4xl ml-14">Scenario</h1>
         </div>
       </header>
 
       <section className="mt-8 ml-60 w-100">
-        {/* For now result will just display, fix this later */}
-        {resultMessage ? (
-          <p className="text-2xl">{resultMessage}</p>
-        ) : (
-          <>
-            <h2 className="text-2xl mb-4">{question.text}</h2>
-            {choices && choices.length === 2 ? (
-              <div className="flex flex-col space-y-2 mt-20">
-                {choices.map((choice) => (
-                  <button
-                    key={choice.id}
-                    className="bg-[#AFDDFF] hover:bg-[#60B5FF] font-bold py-2 px-4 rounded"
-                    onClick={() => handleAnswer(choice.value)}
-                  >
-                    {choice.text}
-                  </button>
-                ))}
-              </div>
-            ) : (
-              <p>Error: Could not load choices.</p>
-            )}
-        </>
+        <h2 className="text-2xl mb-4">{question.text}</h2>
+
+        {userChoiceText && (
+          <p className="mb-2 italic">{userChoiceText}</p>
+        )}
+
+        {showDotDotDot && (
+          <DotDotDotAnimation />
+        )}
+
+        {resultMessage && (
+          <p className="text-2xl font-bold">{resultMessage}</p>
+        )}
+
+        {choicesVisible && choices && choices.length === 2 ? (
+          <div className="flex flex-col space-y-2 mt-20">
+            {choices.map((choice) => (
+              <button
+                key={choice.id}
+                className="bg-[#AFDDFF] hover:bg-[#60B5FF] font-bold py-2 px-4 rounded"
+                onClick={() => handleAnswer(choice.value, choice.text)}
+              >
+                {choice.text}
+              </button>
+            ))}
+          </div>
+        ) : !resultMessage && (
+          <p>Error: Could not load choices.</p>
         )}
       </section>
     </main>
