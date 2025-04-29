@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router';
 import backStatic from "../assets/icons/backStatic.png";
 import backGif from "../assets/icons/backGif.gif";
 import userProfileStatic from "../assets/icons/userProfileStatic.png";
-import serverURL from "../constants";
+import constants from "../constants";
 
 export default function ScenarioGamePlay() {
   const { id } = useParams();
@@ -18,7 +18,7 @@ export default function ScenarioGamePlay() {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch(`${serverURL}/questions/${id}`);
+        const response = await fetch(`${constants.serverURL}/questions/${id}`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

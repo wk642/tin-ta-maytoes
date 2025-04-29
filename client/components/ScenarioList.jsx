@@ -5,7 +5,7 @@ import { Link } from "react-router";
 import backStatic from "../assets/icons/backStatic.png";
 import backGif from "../assets/icons/backGif.gif";
 import userProfileGif from "../assets/icons/userProfileGif.gif"; 
-import serverURL from "../constants";
+import constants from "../constants";
 
 export default function ScenarioList() {
   const [question, setQuestion] = useState(null);
@@ -18,7 +18,7 @@ export default function ScenarioList() {
         // Just show question 4
         // const response = await fetch('http://localhost:5000/initialQuestion?id=4'); 
         // get it to ranomly pick between 4 and 5 
-        const response = await fetch(`${serverURL}/initialQuestion`);
+        const response = await fetch(`${constants.serverURL}/initialQuestion`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
