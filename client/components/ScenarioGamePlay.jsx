@@ -5,7 +5,7 @@ import backStatic from "../assets/icons/backStatic.png";
 import backGif from "../assets/icons/backGif.gif";
 import userProfileStatic from "../assets/icons/userProfileStatic.png";
 import constants from "../constants";
-// import ProfileImageLeft from './ProfileImageLeft';
+import ProfileImageLeft from './ProfileImageLeft';
 
 export default function ScenarioGamePlay() {
   const { id } = useParams();
@@ -61,9 +61,9 @@ export default function ScenarioGamePlay() {
   const DotDotDotAnimation = () => (
     <div className='flex space-x-2 justify-start items-center'>
       <span className='sr-only'>Loading...</span>
-      <div className='h-3 w-3 bg-gray-500 rounded-full animate-bounce [animation-delay:-0.3s]'></div>
-      <div className='h-3 w-3 bg-gray-500 rounded-full animate-bounce [animation-delay:-0.20s]'></div>
-      <div className='h-3 w-3 bg-gray-500 rounded-full animate-bounce'></div>
+      <div className='h-1 w-1 bg-slate-800 rounded-full animate-bounce [animation-delay:-0.3s]'></div>
+      <div className='h-1 w-1 bg-slate-800 rounded-full animate-bounce [animation-delay:-0.40s]'></div>
+      <div className='h-1 w-1 bg-slate-800 rounded-full animate-bounce'></div>
     </div>
   );
 
@@ -85,7 +85,7 @@ export default function ScenarioGamePlay() {
     <main>
       <header className="mt-12 ml-56 flex items-center bg-slate-500/40 w-105 h-25">
         {/* Back button */}
-        <Link to="/scenarioList" className="flex justify-start ml-3 relative w-fit h-fit group cursor-pointer">
+        <Link to="/scenarioList" className="flex justify-start ml-6 relative w-fit h-fit group cursor-pointer">
           <div className="w-12 h-12 bg-contain bg-no-repeat group-hover:animate-bounce" style={{ backgroundImage: `url('${backStatic}')` }}>
             <div className="absolute -inset-4 opacity-0 transition-opacity group-hover:opacity-100 bg-contain bg-no-repeat" style={{ backgroundImage: `url('${backGif}')` }} />
           </div>
@@ -93,30 +93,49 @@ export default function ScenarioGamePlay() {
 
         {/* Title and User Icon */}
         <div className="flex flex-col items-center ml-16">
-          <div className="w-11 h-11 ml-15 bg-contain bg-no-repeat"
+          <div className="w-11 h-11 ml-7 bg-contain bg-no-repeat"
             style={{ backgroundImage: `url('${userProfileStatic}')` }}>
           </div>
-          <h1 className="text-4xl ml-14">Scenario</h1>
+          <h1 className="text-4xl ml-5">Scenario</h1>
         </div>
       </header>
 
-      <section className="mt-8 ml-60 w-100">
-        <h2 className="text-2xl mb-4">{question.text}</h2>
-
+      <section className="mt-8 ml-35 w-100">
+      <div className="flex items-start">
+          <ProfileImageLeft />  
+          <div className="flex-1">
+            <h2 className="text-1xl mb-4 ml-3 w-85 bg-slate-400/50 rounded-lg p-3">{question.text}</h2>
+          </div>
+        </div>
         {userChoiceText && (
-          <p className="mb-2 italic">{userChoiceText}</p>
+          <div className="flex items-start justify-end">
+            <div className="flex-1 text-right">
+              <p className="mb-2 italic">{userChoiceText}</p>
+            </div>
+          </div>
         )}
 
         {showDotDotDot && (
-          <DotDotDotAnimation />
+          <div className="flex items-start">
+            <ProfileImageLeft /> 
+            <div className="flex-1 text-1xl mb-4 ml-3 w-85 bg-slate-400/50 rounded-lg p-3">
+              <DotDotDotAnimation />
+            </div>
+          </div>
         )}
 
         {resultMessage && (
-          <p className="text-2xl font-bold">{resultMessage}</p>
+          <div className="flex items-start">
+            <ProfileImageLeft />
+            <div className="flex-1">
+              <p className="text-1xl mb-4 ml-3 w-85 bg-slate-400/50 rounded-lg p-3">{resultMessage}</p>
+            </div>
+          </div>
         )}
 
+
         {choicesVisible && choices && choices.length === 2 ? (
-          <div className="flex flex-col space-y-2 mt-20">
+          <div className="text-1xl flex flex-col space-y-2 ml-25 w-100 mt-15">
             {choices.map((choice) => (
               <button
                 key={choice.id}
