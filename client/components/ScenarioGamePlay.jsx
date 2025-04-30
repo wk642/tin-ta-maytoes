@@ -5,7 +5,8 @@ import backStatic from "../assets/icons/backStatic.png";
 import backGif from "../assets/icons/backGif.gif";
 import userProfileStatic from "../assets/icons/userProfileStatic.png";
 import constants from "../constants";
-import ProfileImageLeft from './ProfileImageLeft';
+import ProfileImageLeft from "./ProfileImageLeft";
+import ProfileImageRight from "./ProfileImageRight";
 
 export default function ScenarioGamePlay() {
   const { id } = useParams();
@@ -110,8 +111,9 @@ export default function ScenarioGamePlay() {
         {userChoiceText && (
           <div className="flex items-start justify-end">
             <div className="flex-1 text-right">
-              <p className="mb-2 italic">{userChoiceText}</p>
+              <p className="mb-2 italic bg-[#60B5FF] rounded-lg p-3 w-85 ml-27">{userChoiceText}</p>
             </div>
+            <ProfileImageRight />
           </div>
         )}
 
@@ -146,7 +148,7 @@ export default function ScenarioGamePlay() {
               </button>
             ))}
           </div>
-        ) : !resultMessage && (
+        ) : !resultMessage && !showDotDotDot && (
           <p>Error: Could not load choices.</p>
         )}
       </section>
