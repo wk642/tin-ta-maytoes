@@ -76,7 +76,8 @@ export default function ScenarioList() {
               />
               {/* Link to the gameplay */}
               <Link to={`/scenarioGamePlay/${scenarios.id}`}>
-                {scenarios.text}               </Link>
+                {scenarios.text}               
+              </Link>
             </li>
           ))}
         </ul>
