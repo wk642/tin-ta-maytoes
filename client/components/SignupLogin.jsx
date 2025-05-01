@@ -52,10 +52,10 @@ export default function SignupLogin ({isSignupLoginOpen, closeSignupLogin}) {
         {activeTab === 'register' && (
           <div className="flex flex-col space-y-4">
             <div className="bg-[#FFECDB] h-90 text-center rounded-xl">
-              <div className="w-180 h-83 border-[#AFDDFF] ounded-xl ml-4">
+              <div className="w-180 h-83 border-[#AFDDFF] rounded-xl ml-4">
                 <h2 className="text-3xl mt-4">Register to store your progress and to unlock story mode.</h2>
                 <h3 className="text-2xl">Coming soon</h3>
-                <form className="border-2 border-[#AFDDFF] p-4 mt-3 h-63 rounded-xl">
+                <form className="p-4 mt-3 h-63 rounded-xl">
                   <input
                     type="text"
                     placeholder="Username"
@@ -92,7 +92,7 @@ export default function SignupLogin ({isSignupLoginOpen, closeSignupLogin}) {
               <div className="w-180 h-83 border-[#AFDDFF] ounded-xl ml-4">
                 <h2 className="text-3xl mt-4">Welcome back, login to keep playing.</h2>
                 <h3 className="text-2xl">Coming soon</h3>
-                <form className="border-2 border-[#AFDDFF] p-4 mt-3 h-63 rounded-xl">
+                <form className="p-4 mt-3 h-63 rounded-xl">
                   <input
                     type="text"
                     placeholder="Username"
@@ -123,7 +123,7 @@ export default function SignupLogin ({isSignupLoginOpen, closeSignupLogin}) {
               <div className="w-180 h-83 border-[#AFDDFF] ounded-xl ml-4">
                 <h2 className="text-3xl mt-4">Welcome back, login to keep playing.</h2>
                 <h3 className="text-2xl">Coming soon</h3>
-                <form className="border-2 border-[#AFDDFF] p-4 mt-3 h-63 rounded-xl">
+                <form className="p-4 mt-3 h-63 rounded-xl">
                   <input
                     type="text"
                     placeholder="Username"
