@@ -9,6 +9,7 @@ import GameStats from "./components/GameStats";
 import Settings from "./components/Settings";
 import Leaderboard from "./components/Leaderboard";
 import StoryModeMenu from "./components/StoryModeMenu";
+import SignupLogin from "./components/SignupLogin";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <div className="font-cbyg overflow-hidden">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/signupLogin" element={<SignupLogin /> } />
             <Route path="/gameStats" 
               element={<GameLayout content={<GameStats />}/>} 
             />
