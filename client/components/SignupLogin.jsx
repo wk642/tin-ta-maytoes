@@ -68,14 +68,14 @@ export default function SignupLogin ({isSignupLoginOpen, closeSignupLogin}) {
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="text-2xl border-b-1 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-center w-160 mt-2"
+                    className="text-2xl border-b-1 border-dashed border-[#AFDDFF] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline focus:border-[#FF9149] focus:border-solid text-center w-160 mt-2"
                   />
                   <input
                     type="password"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="text-2xl border-b-1 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-center w-160 mt-2"
+                    className="text-2xl border-b-1 border-dashed border-[#AFDDFF] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline focus:border-[#FF9149] focus:border-solid text-center w-160 mt-2"
                   />
                 </form>
               </div>
@@ -86,28 +86,57 @@ export default function SignupLogin ({isSignupLoginOpen, closeSignupLogin}) {
             </Link>
           </div>
         )}
-
         {activeTab === 'login' && (
           <div className="flex flex-col space-y-4">
-            <div className="bg-[#FFECDB] h-30 text-center">
-              Welcome back, login to keep playing.
-              <br/>
-              Coming soon
+            <div className="bg-[#FFECDB] h-90 text-center rounded-xl">
+              <div className="w-180 h-83 border-[#AFDDFF] ounded-xl ml-4">
+                <h2 className="text-3xl mt-4">Welcome back, login to keep playing.</h2>
+                <h3 className="text-2xl">Coming soon</h3>
+                <form className="border-2 border-[#AFDDFF] p-4 mt-3 h-63 rounded-xl">
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    className="text-2xl border-b-1 border-dashed border-[#AFDDFF] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline focus:border-[#FF9149] focus:border-solid text-center w-160 mt-2"
+                  />
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="text-2xl border-b-1 border-dashed border-[#AFDDFF] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline focus:border-[#FF9149] focus:border-solid text-center w-160 mt-2"
+                  />
+                </form>
+              </div>
             </div>
+
             <Link to="/gameMenu" className="bg-[#AFDDFF] hover:bg-[#60B5FF] text-[#FF9149] hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-center">
-              Log In
+              Login
             </Link>
           </div>
         )}
 
         {activeTab === 'guest' && (
           <div className="flex flex-col space-y-4">
-            <div className="bg-[#FFECDB] h-30 text-center">
-              Play a few quick rounds.  
+            <div className="bg-[#FFECDB] h-90 text-center rounded-xl">
+              <div className="w-180 h-83 border-[#AFDDFF] ounded-xl ml-4">
+                <h2 className="text-3xl mt-4">Welcome back, login to keep playing.</h2>
+                <h3 className="text-2xl">Coming soon</h3>
+                <form className="border-2 border-[#AFDDFF] p-4 mt-3 h-63 rounded-xl">
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    className="text-2xl border-b-1 border-dashed border-[#AFDDFF] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline focus:border-[#FF9149] focus:border-solid text-center w-160 mt-2"
+                  />
+                </form>
+              </div>
             </div>
-            <Link to="/gameMenu" 
-              className="bg-[#AFDDFF] hover:bg-[#60B5FF] text-[#FF9149] hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-center">
-              Play as Guest
+
+            <Link to="/gameMenu" className="bg-[#AFDDFF] hover:bg-[#60B5FF] text-[#FF9149] hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-center">
+              Play as guest
             </Link>
           </div>
         )}
