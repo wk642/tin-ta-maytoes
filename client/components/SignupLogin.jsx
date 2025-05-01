@@ -41,12 +41,12 @@ export default function SignupLogin ({isSignupLoginOpen, closeSignupLogin}) {
         {/* Tab Content */}
         {activeTab === 'register' && (
           <div className="flex flex-col space-y-4">
-            <div className="bg-orange-300 h-30 text-center">
+            <div className="bg-[#FFECDB] h-30 text-center">
               Register to store your progress and to unlock story mode.
               <br/>
               Coming soon
             </div>
-            <Link to="/" className="bg-[#AFDDFF] hover:bg-[#60B5FF] text-[#FF9149] hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-center">
+            <Link to="/gameMenu" className="bg-[#AFDDFF] hover:bg-[#60B5FF] text-[#FF9149] hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-center">
               Sign Up
             </Link>
           </div>
@@ -54,12 +54,12 @@ export default function SignupLogin ({isSignupLoginOpen, closeSignupLogin}) {
 
         {activeTab === 'login' && (
           <div className="flex flex-col space-y-4">
-            <div className="bg-orange-300 h-30 text-center">
+            <div className="bg-[#FFECDB] h-30 text-center">
               Welcome back, login to keep playing.
               <br/>
               Coming soon
             </div>
-            <Link to="/" className="bg-[#AFDDFF] hover:bg-[#60B5FF] text-[#FF9149] hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-center">
+            <Link to="/gameMenu" className="bg-[#AFDDFF] hover:bg-[#60B5FF] text-[#FF9149] hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-center">
               Log In
             </Link>
           </div>
@@ -67,7 +67,7 @@ export default function SignupLogin ({isSignupLoginOpen, closeSignupLogin}) {
 
         {activeTab === 'guest' && (
           <div className="flex flex-col space-y-4">
-            <div className="bg-orange-300 h-30 text-center">
+            <div className="bg-[#FFECDB] h-30 text-center">
               Play a few quick rounds.  
             </div>
             <Link to="/gameMenu" 
