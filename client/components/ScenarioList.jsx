@@ -5,6 +5,7 @@ import backStatic from "../assets/icons/backStatic.png";
 import backGif from "../assets/icons/backGif.gif";
 import userProfileGif from "../assets/icons/userProfileGif.gif";
 import constants from "../constants";
+import ProfileImageLeft from './ProfileImageLeft';
 
 export default function ScenarioList() {
   const [scenarios, setScenarios] = useState([]);
@@ -68,12 +69,8 @@ export default function ScenarioList() {
         <h2 className="text-2xl border-b-4">Available Scenarios</h2>
         <ul className="mt-4 border-b-4">
           {scenarios.map(scenarios => (
-            <li key={scenarios.id} className="flex items-center mb-2">
-              {/* Contact image */}
-              <div
-                className="w-8 h-8 rounded-full bg-contain bg-no-repeat mr-2"
-                style={{ backgroundImage: `url('${userProfileGif}')` }}
-              />
+            <li key={scenarios.id} className="flex text-xl mb-2 items-center -ml-25 gap-3">
+              <ProfileImageLeft />
               {/* Link to the gameplay */}
               <Link to={`/scenarioGamePlay/${scenarios.id}`}>
                 {scenarios.text}               
