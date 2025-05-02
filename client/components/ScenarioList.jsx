@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router"; 
 import backStatic from "../assets/icons/backStatic.png";
 import backGif from "../assets/icons/backGif.gif";
-import userProfileGif from "../assets/icons/userProfileGif.gif";
 import constants from "../constants";
 import ProfileImageLeft from './ProfileImageLeft';
 
@@ -41,7 +40,7 @@ export default function ScenarioList() {
             setPreviousThreads(data);
         } catch (error) {
             console.error("Error fetching previous threads", error);
-            setError(error.message); // set the error state so user is aware
+            setError(error.message); 
         }
     }
 
