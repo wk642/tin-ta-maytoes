@@ -79,6 +79,11 @@ export default function ScenarioList() {
           ))}
         </ul>
       </section>
+
+      {/* Previous Threads */}
+      <section className="mt-2 ml-62 w-97 text-2xl">
+        <h2 className="text-2xl border-b-4">Previous Scenarios</h2>
+      </section>
     </main>
   );
 }
