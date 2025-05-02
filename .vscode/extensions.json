@@ -12,6 +12,7 @@
         "esbenp.prettier-vscode",
         "pflannery.vscode-versionlens",
         "redhat.vscode-yaml",
-        "lacroixdavid1.vscode-format-context-menu"
+        "lacroixdavid1.vscode-format-context-menu",
+        "Orta.vscode-jest"
     ]
 }
