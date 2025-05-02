@@ -17,6 +17,7 @@ export default function ProfileImageLeft() {
   return (
     <div className="profile-image-div justify-items-stret ml-25 relative w-fit h-fit group">
       <div
+        data-testid="avatar" //for testing
         className="w-10 h-10 bg-contain bg-no-repeat relative"
         style={{ backgroundImage: `url('${botttsAvatarUrl}')` }}
       />

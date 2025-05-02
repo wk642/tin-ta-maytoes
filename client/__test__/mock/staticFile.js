@@ -1,0 +1,1 @@
+export default 'Mocked static file for testing purposes. This file is not meant to be executed.';
