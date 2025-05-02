@@ -11,13 +11,14 @@ export default function ScenarioList() {
   const [scenarios, setScenarios] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [previousThreads, setPreviousThreads] = useState([]);
 
   useEffect(() => {
     const fetchScenarios = async () => {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch(`${constants.serverURL}/threads`); 
+        const response = await fetch(`${constants.serverURL}/threads`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -30,7 +31,22 @@ export default function ScenarioList() {
       }
     };
 
+    const fetchPreviousThreads = async () => {
+        try {
+            const response = await fetch(`${constants.serverURL}/previous-threads`);
+            if (!response.ok) {
+                throw new Error(`Failed to fetch previous threads: ${response.status}`);
+            }
+            const data = await response.json();
+            setPreviousThreads(data);
+        } catch (error) {
+            console.error("Error fetching previous threads", error);
+            setError(error.message); // set the error state so user is aware
+        }
+    }
+
     fetchScenarios();
+    fetchPreviousThreads();
   }, []);
 
   if (loading) {
@@ -75,6 +91,26 @@ export default function ScenarioList() {
               <Link to={`/scenarioGamePlay/${scenarios.id}`}>
                 {scenarios.text}               
               </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Previous Threads */}
+      <section className="mt-2 ml-62 w-97 text-2xl">
+        <h2 className="text-2xl border-b-4">Previous Threads</h2> 
+        <ul className="mt-4">
+          {previousThreads.map(thread => ( 
+            <li key={thread.id} className="flex text-xl mb-2 items-center w-100 gap-3 border-b-2">
+              <div className="flex -ml-24 gap-3">
+                <ProfileImageLeft />
+                <div className="text-2xl flex flex-col">
+                  {thread.player_name}
+                  <div className="text-xl">
+                    {thread.created_at}
+                  </div>
+                </div>
+              </div>
             </li>
           ))}
         </ul>
