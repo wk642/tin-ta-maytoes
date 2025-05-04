@@ -15,7 +15,7 @@ jest.mock('react-router', () => ({
   ),
 }));
 
-describe("Settings Component", () => {
+describe("Story Mode Menu Component", () => {
   it("renders without crashing", () => {
     render(<StoryModeMenu />);
   });
