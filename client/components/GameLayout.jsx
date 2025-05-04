@@ -11,7 +11,9 @@ export default function GameLayout( {content}) {
   return (
     <main>
       {/* background image */}
-      <div className="bg-cover bg-no-repeat fixed bg-orange-300 w-screen h-screen overflow-hidden" style={{ backgroundImage: `url('${bgImage}')`, backgroundSize: 'contain', backgroundPosition: 'center',}}>
+      <div 
+        data-testid="bg-image" 
+        className="bg-cover bg-no-repeat fixed bg-orange-300 w-screen h-screen overflow-hidden" style={{ backgroundImage: `url('${bgImage}')`, backgroundSize: 'contain', backgroundPosition: 'center',}}>
 
         {/* Content is anything that's on the left side where it is the main game play */}
         {content}
