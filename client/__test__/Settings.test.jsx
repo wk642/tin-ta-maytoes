@@ -9,7 +9,8 @@ jest.mock('react-router', () => ({
   // Replace the link with a mock
   Link: ({ children, to, ...props }) => (
     // replace the link with <a> for now and renders what's inside
-    <a href={to} {...props} data-testid="mock-settings">
+    // also replacing the route
+    <a href={to} {...props} data-testid={`nav-link-${to.replace('/', '')}`}>
       {children}
     </a>
   ),
@@ -20,8 +21,10 @@ describe("Settings Component", () => {
     render(<Settings />);
   });
 
-  it("renders the back button", () => {
+  it('renders the back button and link', () => {
     render(<Settings />);
+    const gameMenuLink = screen.getByTestId('nav-link-gameMenu');
+    expect(gameMenuLink).toBeInTheDocument();
     const backButton = screen.getByTestId('back-button');
     expect(backButton).toBeInTheDocument();
   });
