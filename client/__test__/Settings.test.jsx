@@ -19,4 +19,10 @@ describe("Settings Component", () => {
   it("renders without crashing", () => {
     render(<Settings />);
   });
+
+  it("renders the title 'Settings'", () => {
+    render(<Settings />);
+    const headerText = screen.getByRole('heading', { name: /Settings/i });
+    expect(headerText).toBeInTheDocument();
+  });
 });
