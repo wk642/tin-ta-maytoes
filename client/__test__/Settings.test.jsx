@@ -25,10 +25,16 @@ describe("Settings Component", () => {
     const headerText = screen.getByRole('heading', { name: /Settings/i });
     expect(headerText).toBeInTheDocument();
   });
-  
+
   it("renders the volume up button", () => {
     render(<Settings />);
     const volumeUpButton = screen.getByAltText(/Volume Up Button/i);
     expect(volumeUpButton).toBeInTheDocument();
+  });
+
+  it("renders the volume down button", () => {
+    render(<Settings />);
+    const volumeDownButton = screen.getByAltText(/Volume Down Button/i);
+    expect(volumeDownButton).toBeInTheDocument();
   });
 });
