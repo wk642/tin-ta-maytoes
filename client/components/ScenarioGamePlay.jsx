@@ -51,13 +51,12 @@ export default function ScenarioGamePlay() {
     await new Promise(resolve => setTimeout(resolve, 1500));
     setShowDotDotDot(false);
 
-    if (questionData && questionData.correctAnswerValue === selectedValue) {
+    if (selectedValue % 2 === 0) {
       setResultMessage("You survived!");
     } else {
       setResultMessage("You did not survive!");
     }
   };
-
   // create the animation of 
   const DotDotDotAnimation = () => (
     <div className='flex space-x-2 justify-start items-center'>
