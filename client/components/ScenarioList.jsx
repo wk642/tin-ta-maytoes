@@ -17,7 +17,7 @@ export default function ScenarioList() {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch(`${constants.serverURL}/threads`);
+        const response = await fetch(`${constants.serverURL}/initial-thread`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
