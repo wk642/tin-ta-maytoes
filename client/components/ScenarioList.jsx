@@ -98,7 +98,7 @@ export default function ScenarioList() {
       {/* Previous Threads */}
       <section className="mt-2 ml-62 w-97 text-2xl">
         <h2 className="text-2xl border-b-4">Previous Threads</h2> 
-        <ul className="mt-4">
+        <ul className="mt-4 overflow-scroll overflow-x-hidden h-40">
           {previousThreads.map(thread => ( 
             <li key={thread.id} className="flex text-xl mb-2 items-center w-100 gap-3 border-b-2">
               <div className="flex -ml-24 gap-3">
