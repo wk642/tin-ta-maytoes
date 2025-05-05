@@ -30,7 +30,7 @@ describe("Home Icon Component", () => {
     expect(gifImage).toBeInTheDocument();
   });
 
-  it('renders the settings link', () => {
+  it('renders the home link', () => {
     render(<HomeIcon />);
     const settingsLink = screen.getByTestId('nav-link-'); 
     expect(settingsLink).toBeInTheDocument();
