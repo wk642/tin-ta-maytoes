@@ -32,7 +32,9 @@ export default function Settings() {
         {/* Back button */}
         <Link to="/gameMenu" className="flex justify-start ml-3 relative w-fit h-fit group cursor-pointer">
           <div className="w-12 h-12 mt-4 ml-2 bg-contain bg-no-repeat group-hover:animate-bounce" style={{ backgroundImage: `url('${backStatic}')` }}>
-            <div className="absolute -inset-4 opacity-0 transition-opacity group-hover:opacity-100 bg-contain bg-no-repeat" style={{ backgroundImage: `url('${backGif}')` }} />
+            <div 
+              data-testid="back-button"
+              className="absolute -inset-4 opacity-0 transition-opacity group-hover:opacity-100 bg-contain bg-no-repeat" style={{ backgroundImage: `url('${backGif}')` }} />
           </div>
         </Link>
 
@@ -41,14 +43,14 @@ export default function Settings() {
 
       {/* Light / Dark Mode */}
       <div className="mt-5 ml-90">
-        <img src={LightMode}/>
+        <img src={LightMode} alt="Light Dark Mode Toggle Button"/>
       </div>
 
       {/* Volume */}
       <div className="flex items-center gap-4 ml-70">
-        <img src={VolumeDown} className="text-gray-500" />
+        <img src={VolumeDown} className="text-gray-500" alt="Volume Down Button"/>
             
-        <img src={VolumeUp} className="text-gray-500" />
+        <img src={VolumeUp} className="text-gray-500" alt="Volume Up Button"/>
       </div>
     </main>
   )

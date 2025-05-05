@@ -13,7 +13,9 @@ export default function StoryModeMenu() {
         {/* Back button */}
         <Link to="/gameMenu" className="flex justify-start ml-3 relative w-fit h-fit group cursor-pointer">
           <div className="w-12 h-12 mt-4 ml-2 bg-contain bg-no-repeat group-hover:animate-bounce" style={{ backgroundImage: `url('${backStatic}')` }}>
-            <div className="absolute -inset-4 opacity-0 transition-opacity group-hover:opacity-100 bg-contain bg-no-repeat" style={{ backgroundImage: `url('${backGif}')` }} />
+            <div 
+              data-testid="back-button"
+              className="absolute -inset-4 opacity-0 transition-opacity group-hover:opacity-100 bg-contain bg-no-repeat" style={{ backgroundImage: `url('${backGif}')` }} />
           </div>
         </Link>
 
