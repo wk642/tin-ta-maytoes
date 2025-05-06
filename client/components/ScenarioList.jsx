@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router"; 
 import backStatic from "../assets/icons/backStatic.png";
 import backGif from "../assets/icons/backGif.gif";
+import BookmarkedYes from "../assets/icons/BookmarkedYes.png";
+import BookmarkedNo from "../assets/icons/BookmarkedNo.png";
 import constants from "../constants";
 import ProfileImageLeft from './ProfileImageLeft';
 
@@ -11,6 +13,26 @@ export default function ScenarioList() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [previousThreads, setPreviousThreads] = useState([]);
+
+  const handleFavorite = async (threadId) => {
+    try {
+        const response = await fetch(`${constants.serverURL}/threads/${threadId}/favorite`, {
+            method: 'POST',
+        });
+        if (!response.ok) {
+            throw new Error('Failed to favorite thread');
+        }
+        // Update the UI to reflect the change immediately
+        setPreviousThreads(prevThreads =>
+            prevThreads.map(thread =>
+                thread.id === threadId ? { ...thread, is_favorite: true } : thread
+            )
+        );
+    } catch (error) {
+        console.error("Error favoriting thread: ", error);
+        setError(error.message);
+    }
+};
 
   useEffect(() => {
     const fetchScenarios = async () => {
@@ -105,6 +127,14 @@ export default function ScenarioList() {
                 <ProfileImageLeft />
                 <div className="text-2xl flex flex-col">
                   {thread.player_name}
+                   {/* Favorite button */}
+                   <button onClick={() => handleFavorite(thread.id)}>
+                    <img
+                      src={thread.is_favorite ? BookmarkedYes : BookmarkedNo}
+                      alt={thread.is_favorite ? "Bookmarked" : "Not Bookmarked"}
+                      className="w-6 h-6 ml-70 -mt-25"
+                    />
+                  </button>
                   <div className="text-xl">
                     {thread.created_at}
                   </div>
