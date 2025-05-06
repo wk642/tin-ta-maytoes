@@ -14,7 +14,21 @@ export default function SignupLogin ({isSignupLoginOpen, closeSignupLogin}) {
   // Handle register
 
 
-  // Handle login
+  // Handle guest email
+  const handleGuest = (email) =>{
+    if (!isValidEmail(email)) {
+      alert("Please enter a valid email to play as guest.");
+      return;
+    }
+    console.log("Valid email:", email);
+  }
+  
+  // valid email
+  const isValidEmail = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    console.log(emailRegex.test(email));
+    return emailRegex.test(email);
+  };
 
   if (!isSignupLoginOpen) return null;
   return (
@@ -124,18 +138,28 @@ export default function SignupLogin ({isSignupLoginOpen, closeSignupLogin}) {
                 <h2 className="text-3xl mt-4">Welcome back, login to keep playing.</h2>
                 <h3 className="text-2xl">Coming soon</h3>
                 <form className="p-4 mt-3 h-63 rounded-xl">
-                  <input
+                  {/* takinng out username for now */}
+                  {/* <input
                     type="text"
                     placeholder="Username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
+                    className="text-2xl border-b-1 border-dashed border-[#AFDDFF] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline focus:border-[#FF9149] focus:border-solid text-center w-160 mt-2"
+                  /> */}
+                  <input
+                    required
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="text-2xl border-b-1 border-dashed border-[#AFDDFF] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline focus:border-[#FF9149] focus:border-solid text-center w-160 mt-2"
                   />
                 </form>
               </div>
             </div>
 
-            <Link to="/gameMenu" className="bg-[#AFDDFF] hover:bg-[#60B5FF] text-[#FF9149] hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-center">
+            {/* check to see if email is valid formatt. if it is goto game menu, if not alert user */}
+            <Link to={isValidEmail(email) ? "/gameMenu" : "#"} onClick={handleGuest} className="bg-[#AFDDFF] hover:bg-[#60B5FF] text-[#FF9149] hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-center">
               Play as guest
             </Link>
           </div>
@@ -144,3 +168,6 @@ export default function SignupLogin ({isSignupLoginOpen, closeSignupLogin}) {
     </div>
   );
 };
+
+  
+  
