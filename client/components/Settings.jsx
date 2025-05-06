@@ -28,17 +28,18 @@ export default function Settings() {
 
   return (
     <main>
-      <header className="bg-slate-500/40 items-center justify-content mt-11  w-102 h-18 ml-57">
-        {/* Back button */}
-        <Link to="/gameMenu" className="flex justify-start ml-3 relative w-fit h-fit group cursor-pointer">
-          <div className="w-12 h-12 mt-4 ml-2 bg-contain bg-no-repeat group-hover:animate-bounce" style={{ backgroundImage: `url('${backStatic}')` }}>
-            <div 
-              data-testid="back-button"
-              className="absolute -inset-4 opacity-0 transition-opacity group-hover:opacity-100 bg-contain bg-no-repeat" style={{ backgroundImage: `url('${backGif}')` }} />
-          </div>
-        </Link>
+      <header className="mt-11 ml-56 flex items-center bg-slate-500/40 w-105 h-20">
+              {/* Back button */}
+              <Link to="/gameMenu" className="mt-15 mr-4">
+                <div className="flex -ml-30 justify-start relative w-fit h-fit group">
+                  <div className="w-12 h-12 mb-11 ml-34 bg-contain bg-no-repeat relative group-hover:animate-bounce"
+                    style={{ backgroundImage: `url('${backStatic}')` }}>
+                    <div className="absolute -inset-4 opacity-0 transition-opacity group-hover:opacity-100 bg-contain bg-no-repeat" style={{ backgroundImage: `url('${backGif}')` }} />
+                  </div>
+                </div>
+              </Link>
 
-        <h1 className="text-4xl fixed mt-3 ml-34 justify-content">Settings</h1>
+        <h1 className="text-4xl fixed mt-3 ml-38 justify-content">Settings</h1>
       </header>
 
       {/* Light / Dark Mode */}
