@@ -27,7 +27,7 @@ export default function ScenarioList() {
       // Update favorite immediately
       setPreviousThreads(prevThreads =>
         prevThreads.map(thread =>
-          thread.id === threadId ? { ...thread, favorites: true } : thread
+          thread.id === threadId ? { ...thread, favorites: !thread.favorites } : thread
         )
       );
     } catch (error) {
@@ -195,4 +195,3 @@ export default function ScenarioList() {
     </main>
   );
 }
-
