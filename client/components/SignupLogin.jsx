@@ -136,7 +136,6 @@ export default function SignupLogin ({isSignupLoginOpen, closeSignupLogin}) {
             <div className="bg-[#FFECDB] h-90 text-center rounded-xl">
               <div className="w-180 h-83 border-[#AFDDFF] ounded-xl ml-4">
                 <h2 className="text-3xl mt-4">Welcome back, login to keep playing.</h2>
-                <h3 className="text-2xl">Coming soon</h3>
                 <form className="p-4 mt-3 h-63 rounded-xl">
                   {/* takinng out username for now */}
                   {/* <input
